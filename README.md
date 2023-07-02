@@ -25,7 +25,7 @@ Run the project and access the documentation at:
 ## Screenshot
 See the result after construction:
 
-![](https://raw.githubusercontent.com/davibaltar/public-store/master/screen-swagger-autogen-using-router.png)
+![](/missing-routes.png)
 
 
 ## License
