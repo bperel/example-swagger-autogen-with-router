@@ -8,17 +8,14 @@
  * $ npm run start-gendoc
  */
 
-
+const path = require("path")
 const swaggerUi = require('swagger-ui-express')
 const swaggerFile = require('../swagger-output.json')
 const express = require('express')
 const app = express()
+const { router } = require( "express-file-routing");
 
-/* Routes */
-const router = require('./routes')
-
-/* Middlewares */
-app.use(router)
+app.use("/", router({  directory: path.join(__dirname, "routes")}));
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 app.listen(3000, () => {
